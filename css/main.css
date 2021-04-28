@@ -30,6 +30,8 @@ h3 {
 
 h1 {
   font-size: 1.875em;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
 }
 
 h2 {
@@ -43,12 +45,9 @@ h3 {
 p {
   font-size: 0.875em;
   line-height: 1.313em;
-  padding: 0 1.875em;
+
 }
 
-.section-one ul li {
-  padding: 0 1.875em;
-}
 
 /*The widths are in a percentage!*/
 header {
@@ -109,6 +108,10 @@ header nav ul li a {
   width: 90%;
 }
 
+.bottom-section {
+  justify-content: left;
+}
+
 .main-image {
   height: auto;
 }
@@ -132,7 +135,6 @@ header nav ul li a {
 .main-title p {
   padding: 0;
   font-size: 1em;
-  /* line-height: 1.563em; */
 }
 
 .section-one,
@@ -150,6 +152,7 @@ header nav ul li a {
 .section-two h3,
 .section-three h3 {
   padding: auto 1.875em;
+  border-left: 0.063em solid #eee;
 }
 
 .menu {
@@ -165,12 +168,12 @@ header nav ul li a {
 .reviews {
   color: #333;
   font-size: 1em;
-  /* line-height: 1.313em; */
+
 }
 
 .address {
   font-size: 1em;
-  /* line-height: 1.5em; */
+
 }
 
 /*The widths are in a percentage!*/
@@ -194,49 +197,61 @@ footer span {
 
 /* TABLET */
 @media all and (min-width:768px) {
+	header {
+		width: 100%;
+	}
+
   .bottom-section {
     align-items: flex-start;
-		flex-flow: row;
+    flex-flow: row;
   }
 
   .section-one,
   .section-two,
   .section-three {
     width: 33.3%;
+		padding: 1em;
   }
 
-	 .section-two {
+	.section-one {
+		padding-left: 0;
+	}
+  .section-two {
     border-left: 0.063em solid #eee;
     border-right: 0.063em solid #eee;
   }
+
+
 }
 
 /* DESKTOP */
 @media all and (min-width:1200px) {
-	header {
-		display: flex;
-		/* justify-content: space-between; */
-		align-items: center;
-		flex: row;
-		width: 100%;
-	}
+  header {
+    display: flex;
+    align-items: center;
+    flex: row;
+    width: 100%;
+  }
 
-	header nav ul {
-		display: flex;
-		justify-content: space-around;
-		align-items: flex-start;
-	}
+  header nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
 
-	header h1 {
-		width: 50%;
-		padding: 0.25em;
-		/* border-bottom:  0.188em solid #77a466; */
-		text-align: left;
-	}
+  header h1 {
+    width: 50%;
+    padding: 0.25em;
+    text-align: left;
+  }
 
-	header nav {
-		width: 40%;
-		border-top: 0;
+  header nav {
+    width: 40%;
+    border-top: 0;
+  }
 
-	}
+
+
+
+
 }
